@@ -1,11 +1,7 @@
-
-
-
-
 //  It is more performant to deduplicate using `array_agg` with a limit
 //  clause in BigQuery:
 //  https://github.com/dbt-labs/dbt-utils/issues/335#issuecomment-788157572
-function deduplicateTable(relation, partition_by, order_by, incremental) {
+function deduplicate(relation, partition_by, order_by, incremental) {
   const sql = `
     select unique.*
     from (
@@ -23,10 +19,10 @@ function deduplicateTable(relation, partition_by, order_by, incremental) {
 
 
 module.exports = {
-  deduplicate,
-  group_by,
-  safe_add,
-  safe_divide,
-  safe_subtract,
-  star
+  deduplicate
+  // group_by,
+  // safe_add,
+  // safe_divide,
+  // safe_subtract,
+  // star
 }
