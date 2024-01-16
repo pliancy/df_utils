@@ -1,5 +1,12 @@
 {
+    "scripts": {
+        "test": "jest",
+        "test.watch": "jest --watch"
+    },
     "dependencies": {
         "@dataform/core": "^2.7.0"
+    },
+    "devDependencies": {
+        "jest": "^29.7.0"
     }
 }
