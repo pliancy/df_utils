@@ -2,7 +2,7 @@
 //  clause in BigQuery:
 //  https://github.com/dbt-labs/dbt-utils/issues/335#issuecomment-788157572
 function deduplicate(relation, partition_by, order_by, incremental) {
-  const sql = `
+    const sql = `
     select unique.*
     from (
       select
@@ -14,15 +14,10 @@ function deduplicate(relation, partition_by, order_by, incremental) {
       group by ${partition_by}
     )
   `;
-  return sql;
+    return sql;
 }
 
 
 module.exports = {
-  deduplicate
-  // group_by,
-  // safe_add,
-  // safe_divide,
-  // safe_subtract,
-  // star
+    deduplicate
 }
