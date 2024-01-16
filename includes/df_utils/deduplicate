@@ -18,11 +18,4 @@ function deduplicate(relation, partition_by, order_by, incremental) {
 }
 
 
-module.exports = {
-  deduplicate
-  // group_by,
-  // safe_add,
-  // safe_divide,
-  // safe_subtract,
-  // star
-}
+export default { deduplicate }
