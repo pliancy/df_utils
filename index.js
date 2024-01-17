@@ -1,11 +1,11 @@
 // Description: Index file for the library
-const deduplicate = require('./includes/deduplicate');
-const group_by = require('./includes/group_by');
-const unpivot = require('./includes/unpivot');
+const includesDeduplicate = require('./includes/deduplicate');
+const includesGroupBy = require('./includes/group_by');
+const includesUnpivot = require('./includes/unpivot');
 
-deduplicate.deduplicate();
-group_by.group_by();
-unpivot.unpivot();
+const deduplicate = includesDeduplicate.deduplicate;
+const group_by = includesGroupBy.group_by;
+const unpivot = includesUnpivot.unpivot;
 
 module.exports = {
   deduplicate,
